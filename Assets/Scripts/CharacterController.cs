@@ -24,6 +24,8 @@ public class CharacterController : MonoBehaviour {
     private float shootCoolDown = 0;
 
     private bool isActive;
+    public float xSize = 0.5f;
+
 
     // Use this for initialization
     void Start() {
@@ -85,12 +87,12 @@ public class CharacterController : MonoBehaviour {
     private void CheckCollisions()
     {
         start = new Vector2(
-            transform.position.x - 1,
+            transform.position.x - xSize,
             transform.position.y - downOffset
             );
 
         end = new Vector2(
-            transform.position.x + 1,
+            transform.position.x + xSize,
             transform.position.y - downOffset
         );
 
