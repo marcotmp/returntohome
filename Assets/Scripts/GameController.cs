@@ -9,11 +9,12 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        mother.Activate(false);
+        father.Activate(true);
+    }
+
+    // Update is called once per frame
+    void Update () {
         // press tab to change characters
         var tab = Input.GetKeyDown(KeyCode.Tab);
 
@@ -21,13 +22,15 @@ public class GameController : MonoBehaviour {
         {
             if (father.IsActive())
             {
-                mother.Activate();
+                mother.Activate(true);
+                father.Activate(false);
                 camera.SetTarget(mother);
             }
             else
             {
-                father.Activate();
-                camera.SetTarget(mother);
+                mother.Activate(false);
+                father.Activate(true);
+                camera.SetTarget(father);
             }
 
         }

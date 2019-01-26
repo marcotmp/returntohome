@@ -122,9 +122,9 @@ public class CharacterController : MonoBehaviour {
         return isActive;
     }
 
-    public void Activate()
+    public void Activate(bool value)
     {
-        isActive = true;
+        gameObject.SetActive(value);
+        isActive = value;
     }
-
 }
