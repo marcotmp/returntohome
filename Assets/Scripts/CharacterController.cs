@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +16,14 @@ public class CharacterController : MonoBehaviour {
     
     private Vector2 start;
     private Vector2 end;
+
     private Rigidbody2D rigidbody;
+
     private bool jumpButton;
     private bool isJumping = false;
     private float shootCoolDown = 0;
 
+    private bool isActive;
 
     // Use this for initialization
     void Start() {
@@ -112,4 +116,15 @@ public class CharacterController : MonoBehaviour {
         //Gizmos.DrawLine(new Vector2(rect.xMax, rect.yMax), new Vector2(rect.xMin, rect.yMax));
         //Gizmos.DrawSphere(transform.position, 0.1f);
     }
+
+    public bool IsActive()
+    {
+        return isActive;
+    }
+
+    public void Activate()
+    {
+        isActive = true;
+    }
+
 }

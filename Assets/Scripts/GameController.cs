@@ -2,7 +2,7 @@
 
 public class GameController : MonoBehaviour {
 
-    //public Camera
+    public CameraController camera;
     public CharacterController father;
     public CharacterController mother;
 
@@ -19,11 +19,17 @@ public class GameController : MonoBehaviour {
 
         if (tab)
         {
-            //if (father.IsActive())
-            //{
-            //    mother.Activate();
+            if (father.IsActive())
+            {
+                mother.Activate();
+                camera.SetTarget(mother);
+            }
+            else
+            {
+                father.Activate();
+                camera.SetTarget(mother);
+            }
 
-            //}
         }
-	}
+    }
 }

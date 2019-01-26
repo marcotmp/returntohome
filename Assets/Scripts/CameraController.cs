@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
@@ -14,4 +15,9 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		transform.position = target.position + offset;
 	}
+
+    public void SetTarget(CharacterController mother)
+    {
+
+    }
 }
