@@ -25,7 +25,7 @@ public class CharacterController : MonoBehaviour {
 
     private bool isActive;
     public float xSize = 0.5f;
-
+    public LayerMask whatIsGround;
 
     // Use this for initialization
     void Start() {
@@ -96,7 +96,7 @@ public class CharacterController : MonoBehaviour {
             transform.position.y - downOffset
         );
 
-        RaycastHit2D[] hits = Physics2D.LinecastAll(start, end);
+        RaycastHit2D[] hits = Physics2D.LinecastAll(start, end, whatIsGround);
 
         if (hits.Length > 0)
         {

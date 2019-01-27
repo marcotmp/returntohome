@@ -6,26 +6,34 @@ public class CameraController : MonoBehaviour {
     public Transform target;
     public Vector3 offset;
     public float transitionSpeed;
+    private Vector3 startPosition;
+    private Vector3 endPosition;
+    private float deltaTime;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    private float t;
+    
 	// Update is called once per frame
 	void Update () {
 
-        var targetPosition = target.position + offset;
+        if (t <= 1)
+        {
+            t += Time.deltaTime * transitionSpeed;
+            var targetPosition = Vector3.Lerp(startPosition, endPosition, t);
 
-        //targetPosition.z = Mathf.Lerp(transform.position.z, targetPosition.z, Time.deltaTime * transitionSpeed);
-
-        targetPosition = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * transitionSpeed);
-
-		transform.position = targetPosition;
-	}
+            transform.position = targetPosition;
+        }
+        else
+        {
+            transform.position = target.transform.position + offset;
+        }
+    }
 
     public void SetTarget(CharacterController target)
     {
         this.target = target.transform;
+
+        startPosition = transform.position;
+        endPosition = target.transform.position + offset;
+        t = 0;
     }
 }

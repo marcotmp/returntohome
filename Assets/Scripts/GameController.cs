@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
 
 public class GameController : MonoBehaviour {
-
+    public static GameController instance;
     public CameraController camera;
     public CharacterController father;
     public CharacterController mother;
+    public int currentKey = 0;
 
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     // Use this for initialization
     void Start () {
