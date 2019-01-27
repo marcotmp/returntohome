@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
 
     private bool isDecreasing = false;
     private bool isHerStoryComplete = false;
+    private bool isHisStoryComplete = false;
 
     private void Awake()
     {
@@ -74,7 +75,7 @@ public class GameController : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
         // press tab to change characters
         var tab = Input.GetKeyDown(KeyCode.Tab);
 
@@ -95,6 +96,8 @@ public class GameController : MonoBehaviour {
             ColorUtility.TryParseHtmlString("#FFDB00", out color);
         else if (key == 2)
             ColorUtility.TryParseHtmlString("#5770E2", out color);
+        else if (key == 4)
+            ColorUtility.TryParseHtmlString("#3EFF00", out color);
         else
             ColorUtility.TryParseHtmlString("#E25775", out color);
 
@@ -109,13 +112,43 @@ public class GameController : MonoBehaviour {
 
     public void CompleteHerStory()
     {
-        // set her story complete
-        // go back father story.
-        mother.Activate(false);
-        father.Activate(true);
-        camera.SetTarget(father);
+        if (!isHisStoryComplete)
+        {
+            // set her story complete
+            // go back father story.
+            mother.Activate(false);
+            father.Activate(true);
+            camera.SetTarget(father);
+        }
 
         isHerStoryComplete = true;
+
+        CheckComplete();
+    }
+
+    public void CompleteHisStory()
+    {
+        if (!isHerStoryComplete)
+        {
+            // set her story complete
+            // go back father story.
+            mother.Activate(true);
+            father.Activate(false);
+            camera.SetTarget(mother);
+        }
+
+        isHisStoryComplete = true;
+
+        CheckComplete();
+    }
+
+    public void CheckComplete()
+    {
+        if (isHisStoryComplete && isHerStoryComplete)
+        {
+            dialog.ShowText("Finally Home Together");
+            // final screen
+        }
     }
 
     public void ToggleCharacter()

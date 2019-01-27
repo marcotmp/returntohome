@@ -43,3 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Father
+    uniqueID: 407579013
+    locked: 0
+  - name: Mother
+    uniqueID: 1700954581
+    locked: 0
