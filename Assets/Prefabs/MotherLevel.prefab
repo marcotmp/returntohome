@@ -72,7 +72,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: -1
-  controller: {fileID: 0}
   onTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -208,7 +207,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 2
-  controller: {fileID: 0}
   onTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -516,6 +514,8 @@ GameObject:
   - component: {fileID: 6592548411727842918}
   - component: {fileID: 514792812168531330}
   - component: {fileID: 6054136707704184564}
+  - component: {fileID: 6156276272631678787}
+  - component: {fileID: 6645710113859621663}
   m_Layer: 9
   m_Name: Tilemap
   m_TagString: Untagged
@@ -3204,6 +3204,48 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+--- !u!50 &6156276272631678787
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225510732098781968}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &6645710113859621663
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6225510732098781968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths: []
+  m_VertexDistance: 0.0005
 --- !u!1 &6804684700786235637
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,7 +3361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 1
-  controller: {fileID: 0}
   onTriggered:
     m_PersistentCalls:
       m_Calls:
