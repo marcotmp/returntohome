@@ -93,6 +93,8 @@ public class GameController : MonoBehaviour {
 
         if (key == 1)
             ColorUtility.TryParseHtmlString("#FFDB00", out color);
+        else if (key == 2)
+            ColorUtility.TryParseHtmlString("#5770E2", out color);
         else
             ColorUtility.TryParseHtmlString("#E25775", out color);
 
