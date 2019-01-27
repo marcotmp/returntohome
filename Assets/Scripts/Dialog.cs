@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     public static Dialog instance;
-    public string myText { get; private set; }
+    public string myText;// { get; private set; }
     public Text dialogText;
     public float letterDelay = 0.1f;
 
@@ -24,6 +24,7 @@ public class Dialog : MonoBehaviour
 
     public void ShowText(string text)
     {
+        myText = text;
         gameObject.SetActive(true);
         StartCoroutine(TextAnimation(text));
     }
