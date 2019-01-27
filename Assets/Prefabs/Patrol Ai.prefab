@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9469d35eed6dba446aaa04c7b363bbb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
 --- !u!114 &2243276978694429376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,3 +291,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Worker: Hey man let''s go take a drink!!'
+  autoHideDelay: 1

@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9469d35eed6dba446aaa04c7b363bbb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
 --- !u!114 &360369088965019440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Supervisor: What are you doing here? This is not your section!'
+  autoHideDelay: 2
 --- !u!1 &5689703289122810828
 GameObject:
   m_ObjectHideFlags: 0

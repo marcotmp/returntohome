@@ -179,26 +179,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7436544618815670390, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
-        type: 3}
-      propertyPath: damage
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1915075945790279623, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
-        type: 3}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 2033868104}
-    - target: {fileID: 2298241674465797733, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.99
-      objectReference: {fileID: 0}
-    - target: {fileID: 5461430866567983126, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
-        type: 3}
-      propertyPath: text
-      value: 'Boss: Where do you think you''re going?!'
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3173b84e905c34c9b6e3f0bd7d473c, type: 3}
 --- !u!1 &17715347

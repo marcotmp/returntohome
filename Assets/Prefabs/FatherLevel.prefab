@@ -4619,6 +4619,7 @@ GameObject:
   - component: {fileID: 5811982893255725665}
   - component: {fileID: 5165258366468106556}
   - component: {fileID: 1478363384}
+  - component: {fileID: 1528932982}
   m_Layer: 8
   m_Name: Stationary
   m_TagString: Untagged
@@ -4754,6 +4755,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 4.046543}
   m_EdgeRadius: 0
+--- !u!114 &1528932982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7246316915682563671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941a24b62b7e31944af6356d6bac0c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Tech: Someone stole my key, Don''t tell the boss'
+  autoHideDelay: 2
 --- !u!1 &7979299476214907183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5355,6 +5370,16 @@ PrefabInstance:
       value: 'Boy:I should probably leave without being seen everyone wants something
         else '
       objectReference: {fileID: 0}
+    - target: {fileID: 2755737362663412724, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: autoHideDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5623083
+      objectReference: {fileID: 0}
     - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
       propertyPath: m_Size.x
@@ -5364,11 +5389,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.5623083
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0672f75a192e2c448f0c9628d1d36eb, type: 3}
@@ -5489,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 1550645926516937120, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.61
+      value: -11.99
       objectReference: {fileID: 0}
     - target: {fileID: 1550645926516937120, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
@@ -5551,6 +5571,11 @@ PrefabInstance:
       propertyPath: text
       value: 'Boy: Damn! The Boss is blocking the way, I should probably go UP the
         stairs'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2755737362663412724, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: autoHideDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
@@ -6372,6 +6397,16 @@ PrefabInstance:
       propertyPath: text
       value: 'Boy: I should probably lay low and not be seen (Press space to duck)'
       objectReference: {fileID: 0}
+    - target: {fileID: 2755737362663412724, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: autoHideDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5623083
+      objectReference: {fileID: 0}
     - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
       propertyPath: m_Size.x
@@ -6381,11 +6416,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.5623083
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0672f75a192e2c448f0c9628d1d36eb, type: 3}
@@ -6670,12 +6700,17 @@ PrefabInstance:
     - target: {fileID: 3024525896186871632, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: damage
-      value: 25
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5689703289122810828, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 360369088965019440, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: text
+      value: 'Boss: Where do you think you''re going?!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
@@ -6930,15 +6965,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
---- !u!4 &2133749656485856281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
-    type: 3}
-  m_PrefabInstance: {fileID: 6005046151726614448}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2133749656485856280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5677543421830382504, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+    type: 3}
+  m_PrefabInstance: {fileID: 6005046151726614448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2133749656485856281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
     type: 3}
   m_PrefabInstance: {fileID: 6005046151726614448}
   m_PrefabAsset: {fileID: 0}
@@ -7689,6 +7724,16 @@ PrefabInstance:
       propertyPath: text
       value: 'Boy: I can probably hide behind the locker by pressing up'
       objectReference: {fileID: 0}
+    - target: {fileID: 2755737362663412724, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: autoHideDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.5623083
+      objectReference: {fileID: 0}
     - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
         type: 3}
       propertyPath: m_Size.x
@@ -7698,11 +7743,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020726854652057715, guid: e0672f75a192e2c448f0c9628d1d36eb,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.5623083
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0672f75a192e2c448f0c9628d1d36eb, type: 3}

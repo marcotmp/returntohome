@@ -134,3 +134,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: 'Workers: Hey!! We are all doing extra hours today.'
+  autoHideDelay: 2
