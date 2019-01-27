@@ -16,6 +16,8 @@ public class GameController : MonoBehaviour {
 
     public float energy;
 
+    public Dialog dialog;
+
     [SerializeField] private GameObject gameOverPanel;
 
     private bool isDecreasing = false;
@@ -24,6 +26,15 @@ public class GameController : MonoBehaviour {
     {
         instance = this;
         energy = maxEnergy;
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        dialog.ShowText("Start");
+
+        mother.Activate(false);
+        father.Activate(true);
     }
 
     public void DecreaseEnergy(float decreaseEnergySpeed)
@@ -58,11 +69,7 @@ public class GameController : MonoBehaviour {
     }
 
 
-    // Use this for initialization
-    void Start () {
-        mother.Activate(false);
-        father.Activate(true);
-    }
+
 
     // Update is called once per frame
     void Update () {
