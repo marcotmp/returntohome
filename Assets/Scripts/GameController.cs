@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
@@ -15,12 +16,25 @@ public class GameController : MonoBehaviour {
 
     public float energy;
 
+    public Dialog dialog;
+
+    [SerializeField] private GameObject gameOverPanel;
+
     private bool isDecreasing = false;
 
     private void Awake()
     {
         instance = this;
         energy = maxEnergy;
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        dialog.ShowText("Start");
+
+        mother.Activate(false);
+        father.Activate(true);
     }
 
     public void DecreaseEnergy(float decreaseEnergySpeed)
@@ -35,6 +49,11 @@ public class GameController : MonoBehaviour {
         energyVeil.color = color;
 
         isDecreasing = true;
+
+        if (energy <= 0)
+        {
+            GameOver();
+        }
     }
 
     public void IncreaseEnergy(float increaseEnergySpeed)
@@ -50,11 +69,7 @@ public class GameController : MonoBehaviour {
     }
 
 
-    // Use this for initialization
-    void Start () {
-        mother.Activate(false);
-        father.Activate(true);
-    }
+
 
     // Update is called once per frame
     void Update () {
@@ -111,6 +126,16 @@ public class GameController : MonoBehaviour {
             father.Activate(true);
             camera.SetTarget(father);
         }
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().path, LoadSceneMode.Single);
+    }
+
+    private void GameOver()
+    {
+        gameOverPanel.gameObject.SetActive(true);
     }
 
 }
