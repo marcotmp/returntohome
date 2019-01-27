@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2081650744540477512}
   - component: {fileID: 61062686775022558}
   - component: {fileID: 50185707903254908}
+  - component: {fileID: 4166891982238725743}
   m_Layer: 8
   m_Name: Father
   m_TagString: Untagged
@@ -105,7 +106,7 @@ MonoBehaviour:
   xSize: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &2081650744540477512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,3 +166,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4166891982238725743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343402870993584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e19dc307a3b8141a72ef251bd9afc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
