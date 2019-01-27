@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
     [SerializeField] private GameObject gameOverPanel;
 
     private bool isDecreasing = false;
+    private bool isHerStoryComplete = false;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class GameController : MonoBehaviour {
     void Start()
     {
         dialog.ShowText("Start");
+        dialog.HideText();
 
         mother.Activate(false);
         father.Activate(true);
@@ -91,6 +93,8 @@ public class GameController : MonoBehaviour {
 
         if (key == 1)
             ColorUtility.TryParseHtmlString("#FFDB00", out color);
+        else if (key == 2)
+            ColorUtility.TryParseHtmlString("#5770E2", out color);
         else
             ColorUtility.TryParseHtmlString("#E25775", out color);
 
@@ -110,11 +114,13 @@ public class GameController : MonoBehaviour {
         mother.Activate(false);
         father.Activate(true);
         camera.SetTarget(father);
+
+        isHerStoryComplete = true;
     }
 
     public void ToggleCharacter()
     {
-        if (father.IsActive())
+        if (father.IsActive() && !isHerStoryComplete)
         {
             mother.Activate(true);
             father.Activate(false);

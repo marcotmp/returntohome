@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     public static Dialog instance;
-    public string myText { get; private set; }
+    public string myText;// { get; private set; }
     public Text dialogText;
     public float letterDelay = 0.1f;
+    public Animator animator;
 
     public void Awake()
     {
@@ -22,18 +23,22 @@ public class Dialog : MonoBehaviour
     }
 
 
-    public void ShowText(string text)
+    public void ShowText(string text, float delay = 0)
     {
+        myText = text;
         gameObject.SetActive(true);
-        StartCoroutine(TextAnimation(text));
+        StartCoroutine(TextAnimation(text, delay));
+
+        animator.Play("DialogOpen");
     }
 
     public void HideText()
     {
-        gameObject.SetActive(false);
+        animator.Play("DialogClose");
+//        gameObject.SetActive(false);
     }
     
-    private IEnumerator TextAnimation(string text)
+    private IEnumerator TextAnimation(string text, float delay)
     {
         var color = dialogText.color;
         int i = 0;
@@ -49,14 +54,10 @@ public class Dialog : MonoBehaviour
             yield return new WaitForSeconds(letterDelay);
         }
 
-        yield return new WaitForSeconds(0.5f);
-
-
-        while (color.a >= 0)
+        if (delay != 0)
         {
-            color.a -= 1f * Time.deltaTime;
-            dialogText.color = color;
-            yield return new WaitForSeconds(letterDelay);
+            yield return new WaitForSeconds(delay);
+            HideText();
         }
     }
 }
