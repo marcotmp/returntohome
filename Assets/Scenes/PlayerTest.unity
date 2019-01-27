@@ -646,33 +646,24 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 6612443183885868413}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1881936662 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1625177842445101741, guid: da21037745d5a7143b3791f7ae783854,
-    type: 3}
-  m_PrefabInstance: {fileID: 1625177843789642171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1881936663 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1625177842445101740, guid: da21037745d5a7143b3791f7ae783854,
     type: 3}
   m_PrefabInstance: {fileID: 1625177843789642171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1881936664
+--- !u!114 &1881936664 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1881936664, guid: da21037745d5a7143b3791f7ae783854,
+    type: 3}
+  m_PrefabInstance: {fileID: 1625177843789642171}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1881936662}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6ff7badbe9ba934d973ab13b273b05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myText: 
-  dialogText: {fileID: 2033868104}
-  letterDelay: 0.1
 --- !u!4 &2006852647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3659993667019261357, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
@@ -691,18 +682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9627d42b4a2d5f94b9eb4ff090d106c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2033868104 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1625177842294777075, guid: da21037745d5a7143b3791f7ae783854,
-    type: 3}
-  m_PrefabInstance: {fileID: 1625177843789642171}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1625177843789642171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -714,11 +693,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Dialog
-      objectReference: {fileID: 0}
-    - target: {fileID: 1625177842445101741, guid: da21037745d5a7143b3791f7ae783854,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1625177842445101740, guid: da21037745d5a7143b3791f7ae783854,
         type: 3}
@@ -825,13 +799,7 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1625177842294777074, guid: da21037745d5a7143b3791f7ae783854,
-        type: 3}
-      propertyPath: letterDelay
-      value: 0.01
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1625177842294777074, guid: da21037745d5a7143b3791f7ae783854, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da21037745d5a7143b3791f7ae783854, type: 3}
 --- !u!1001 &6612443183885868413
 PrefabInstance:

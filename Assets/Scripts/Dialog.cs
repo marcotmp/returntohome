@@ -9,6 +9,7 @@ public class Dialog : MonoBehaviour
     public string myText;// { get; private set; }
     public Text dialogText;
     public float letterDelay = 0.1f;
+    public Animator animator;
 
     public void Awake()
     {
@@ -27,11 +28,14 @@ public class Dialog : MonoBehaviour
         myText = text;
         gameObject.SetActive(true);
         StartCoroutine(TextAnimation(text, delay));
+
+        animator.Play("DialogOpen");
     }
 
     public void HideText()
     {
-        gameObject.SetActive(false);
+        animator.Play("DialogClose");
+//        gameObject.SetActive(false);
     }
     
     private IEnumerator TextAnimation(string text, float delay)
