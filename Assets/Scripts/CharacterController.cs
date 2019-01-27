@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour {
     public float reducedJumpVelocity = 3f;
     public float downOffset = 0.7f;
     public bool isGrounded = false;
+    public bool canJump = true;
 
     [SerializeField] private SpriteRenderer sprite;
     
@@ -33,7 +34,7 @@ public class CharacterController : MonoBehaviour {
     }
 
     private void FixedUpdate()
-    {
+    { 
         jumpButton = Input.GetButton("Jump");
         var h = Input.GetAxis("Horizontal");
         
@@ -52,7 +53,7 @@ public class CharacterController : MonoBehaviour {
         if (Mathf.Abs(velocity.y) > 16)
             velocity.y = velocity.y>0?1:-1 * 16;
 
-        if (!isJumping) // idle state?
+        if (canJump && !isJumping) // idle state?
         {
             if (jumpButton)
             {

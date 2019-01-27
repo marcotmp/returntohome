@@ -32,6 +32,7 @@ public class GameController : MonoBehaviour {
     void Start()
     {
         dialog.ShowText("Start");
+        dialog.HideText();
 
         mother.Activate(false);
         father.Activate(true);

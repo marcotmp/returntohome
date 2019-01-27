@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
     private Vector3 endPosition;
     private float deltaTime;
 
-    private float t;
+    private float t=1;
     
 	// Update is called once per frame
 	void Update () {

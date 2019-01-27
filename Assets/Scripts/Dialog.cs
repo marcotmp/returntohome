@@ -47,14 +47,14 @@ public class Dialog : MonoBehaviour
             yield return new WaitForSeconds(letterDelay);
         }
 
-        yield return new WaitForSeconds(1);
+        //yield return new WaitForSeconds(1);
 
-        var color = dialogText.color;
-        while (color.a > 0)
-        {
-            color.a -= 1f * Time.deltaTime;
-            dialogText.color = color;
-            yield return new WaitForSeconds(letterDelay);
-        }
+        //var color = dialogText.color;
+        //while (color.a > 0)
+        //{
+        //    color.a -= 1f * Time.deltaTime;
+        //    dialogText.color = color;
+        //    yield return new WaitForSeconds(letterDelay);
+        //}
     }
 }
