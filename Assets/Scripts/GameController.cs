@@ -8,13 +8,45 @@ public class GameController : MonoBehaviour {
     public CharacterController father;
     public CharacterController mother;
     public Image hudCurrentKey;
+    public Image energyVeil;
 
     public int currentKey { get; private set; } = 0;
+    public float maxEnergy = 100;
 
+    public float energy;
+
+    private bool isDecreasing = false;
 
     private void Awake()
     {
         instance = this;
+        energy = maxEnergy;
+    }
+
+    public void DecreaseEnergy(float decreaseEnergySpeed)
+    {
+        Color color = energyVeil.color;
+
+        if (energy > 0)
+            energy -= Time.deltaTime * decreaseEnergySpeed;
+
+        color.a = 1 - energy / (float)maxEnergy;
+
+        energyVeil.color = color;
+
+        isDecreasing = true;
+    }
+
+    public void IncreaseEnergy(float increaseEnergySpeed)
+    {
+        Color color = energyVeil.color;
+
+        if (energy < maxEnergy)
+            energy += Time.deltaTime * increaseEnergySpeed;
+
+        color.a = 1 - energy / (float)maxEnergy;
+
+        energyVeil.color = color;
     }
 
 
@@ -31,6 +63,9 @@ public class GameController : MonoBehaviour {
 
         if (tab)
             ToggleCharacter();
+
+        if (!isDecreasing) IncreaseEnergy(5);
+        isDecreasing = false;
     }
 
     public void SetKey(int key)

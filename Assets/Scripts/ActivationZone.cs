@@ -6,14 +6,13 @@ using UnityEngine.Events;
 public class ActivationZone : MonoBehaviour
 {
     public int key = 0;
-    public GameController controller;
     public UnityEvent onTriggered;
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (key == -1 || key == controller.currentKey)
+        if (key == -1 || key == GameController.instance.currentKey)
         {
-            controller.RemoveCurrentKey();
+            GameController.instance.RemoveCurrentKey();
             onTriggered?.Invoke();
         }
     }
