@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class DialogTrigger : MonoBehaviour
 {
     public string text;
+    public float autoHideDelay = 0;
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
         // show text    
-        Dialog.instance.ShowText(text);
+        Dialog.instance.ShowText(text, autoHideDelay);
     }
 
     public void OnTriggerExit2D(Collider2D collision)

@@ -22,11 +22,11 @@ public class Dialog : MonoBehaviour
     }
 
 
-    public void ShowText(string text)
+    public void ShowText(string text, float delay = 0)
     {
         myText = text;
         gameObject.SetActive(true);
-        StartCoroutine(TextAnimation(text));
+        StartCoroutine(TextAnimation(text, delay));
     }
 
     public void HideText()
@@ -34,7 +34,7 @@ public class Dialog : MonoBehaviour
         gameObject.SetActive(false);
     }
     
-    private IEnumerator TextAnimation(string text)
+    private IEnumerator TextAnimation(string text, float delay)
     {
         int i = 0;
 
@@ -47,14 +47,10 @@ public class Dialog : MonoBehaviour
             yield return new WaitForSeconds(letterDelay);
         }
 
-        //yield return new WaitForSeconds(1);
-
-        //var color = dialogText.color;
-        //while (color.a > 0)
-        //{
-        //    color.a -= 1f * Time.deltaTime;
-        //    dialogText.color = color;
-        //    yield return new WaitForSeconds(letterDelay);
-        //}
+        if (delay != 0)
+        {
+            yield return new WaitForSeconds(delay);
+            HideText();
+        }
     }
 }

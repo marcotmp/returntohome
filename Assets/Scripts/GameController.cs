@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour {
     [SerializeField] private GameObject gameOverPanel;
 
     private bool isDecreasing = false;
+    private bool isHerStoryComplete = false;
 
     private void Awake()
     {
@@ -111,11 +112,13 @@ public class GameController : MonoBehaviour {
         mother.Activate(false);
         father.Activate(true);
         camera.SetTarget(father);
+
+        isHerStoryComplete = true;
     }
 
     public void ToggleCharacter()
     {
-        if (father.IsActive())
+        if (father.IsActive() && !isHerStoryComplete)
         {
             mother.Activate(true);
             father.Activate(false);
