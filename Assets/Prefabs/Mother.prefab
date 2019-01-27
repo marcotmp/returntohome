@@ -100,8 +100,12 @@ MonoBehaviour:
   reducedJumpVelocity: 3
   downOffset: 0.7
   isGrounded: 1
+  canJump: 1
   sprite: {fileID: 212814445657463060}
   xSize: 0.84
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &61617015609150514
 BoxCollider2D:
   m_ObjectHideFlags: 0

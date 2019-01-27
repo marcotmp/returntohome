@@ -145,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4674744072448564180}
   - component: {fileID: 801198819552594355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FOV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,11 +508,12 @@ MonoBehaviour:
   reducedJumpVelocity: 3
   downOffset: 0.7
   isGrounded: 0
+  canJump: 0
   sprite: {fileID: 3472042477463738895}
   xSize: 0.5
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
 --- !u!114 &3330474462775420929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,7 +594,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3102595487651265614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4187,7 +4188,7 @@ GameObject:
   - component: {fileID: 1851759515047897357}
   - component: {fileID: 5811982893255725665}
   - component: {fileID: 5165258366468106556}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Stationary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4511,6 +4512,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlipAi
       objectReference: {fileID: 0}
+    - target: {fileID: 5677543421830382504, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4570,6 +4576,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenFlip
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689703289122810828, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
@@ -4991,6 +5002,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlipAi
       objectReference: {fileID: 0}
+    - target: {fileID: 5677543421830382504, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5050,6 +5066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenFlip
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689703289122810828, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
@@ -5151,6 +5172,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol Ai
       objectReference: {fileID: 0}
+    - target: {fileID: 7328931165467641132, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 12764195133837396, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5216,6 +5242,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 5.12
       objectReference: {fileID: 0}
+    - target: {fileID: 6986080547768079017, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 871398788738445609, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: speed
@@ -5225,6 +5256,16 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenFlip
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 40680287373174523, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192379500536540255, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c178f17a9ca024fad9e06e75f231f5, type: 3}
@@ -5329,7 +5370,7 @@ PrefabInstance:
     - target: {fileID: 5677543421830382504, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
@@ -5385,6 +5426,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689703289122810828, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
@@ -5486,6 +5532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlipAi
       objectReference: {fileID: 0}
+    - target: {fileID: 5677543421830382504, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5677543421830382505, guid: 39a5567c326ccbe448ca22f4b0d9c039,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5545,6 +5596,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenFlip
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5689703289122810828, guid: 39a5567c326ccbe448ca22f4b0d9c039,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39a5567c326ccbe448ca22f4b0d9c039, type: 3}
@@ -5886,6 +5942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol Ai
       objectReference: {fileID: 0}
+    - target: {fileID: 7328931165467641132, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 12764195133837396, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5951,6 +6012,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.38
       objectReference: {fileID: 0}
+    - target: {fileID: 6986080547768079017, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 871398788738445609, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: speed
@@ -5960,6 +6026,16 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenFlip
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 40680287373174523, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192379500536540255, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c178f17a9ca024fad9e06e75f231f5, type: 3}
@@ -6304,7 +6380,7 @@ PrefabInstance:
     - target: {fileID: 7328931165467641132, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 12764195133837396, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
@@ -6364,12 +6440,17 @@ PrefabInstance:
     - target: {fileID: 6986080547768079017, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 40680287373174523, guid: 73c178f17a9ca024fad9e06e75f231f5,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192379500536540255, guid: 73c178f17a9ca024fad9e06e75f231f5,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73c178f17a9ca024fad9e06e75f231f5, type: 3}
