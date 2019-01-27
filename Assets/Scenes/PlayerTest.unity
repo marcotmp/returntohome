@@ -144,11 +144,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7436544618815670390, guid: 3b3173b84e905c34c9b6e3f0bd7d473c,
-        type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3173b84e905c34c9b6e3f0bd7d473c, type: 3}
 --- !u!1 &17715347
@@ -418,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2006852647}
-  offset: {x: 0, y: 1.44, z: -5.93}
+  offset: {x: 0, y: 1.44, z: -7}
   transitionSpeed: 2
 --- !u!20 &519420031
 Camera:
@@ -671,7 +666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ff7badbe9ba934d973ab13b273b05f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myText: Use Arrows Keys to Move
   dialogText: {fileID: 2033868104}
   letterDelay: 0.1
 --- !u!4 &2006852647 stripped
