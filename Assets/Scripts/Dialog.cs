@@ -35,7 +35,10 @@ public class Dialog : MonoBehaviour
     
     private IEnumerator TextAnimation(string text)
     {
+        var color = dialogText.color;
         int i = 0;
+        color.a = 1;
+        dialogText.color = color;
 
         myText = text;
 
@@ -46,10 +49,10 @@ public class Dialog : MonoBehaviour
             yield return new WaitForSeconds(letterDelay);
         }
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
-        var color = dialogText.color;
-        while (color.a > 0)
+
+        while (color.a >= 0)
         {
             color.a -= 1f * Time.deltaTime;
             dialogText.color = color;

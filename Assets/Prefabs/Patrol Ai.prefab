@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 871398788738445609}
   - component: {fileID: 6797284479425038583}
   - component: {fileID: 909705119932223073}
+  - component: {fileID: 2243276978694429376}
   m_Layer: 10
   m_Name: Patrol Ai
   m_TagString: Untagged
@@ -277,3 +278,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+--- !u!114 &2243276978694429376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7328931165467641132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941a24b62b7e31944af6356d6bac0c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: 'Worker: Hey man let''s go take a drink!!'

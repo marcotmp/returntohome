@@ -12,6 +12,8 @@ public class FatherController : MonoBehaviour
     private CharacterController character;
     private bool crouched = false;
     public bool IsHidden = false;
+    private float reducedSpeed;
+    private float actualSpeed;
 
     private void Start()
     {
@@ -19,6 +21,8 @@ public class FatherController : MonoBehaviour
         box = gameObject.GetComponent<BoxCollider2D>();
         InitialBoxOffset = box.offset;
         InitialBoxSize = box.size;
+        reducedSpeed = character.speed / 2;
+        actualSpeed = character.speed;
     }
 
     // Update is called once per frame
@@ -43,11 +47,13 @@ public class FatherController : MonoBehaviour
 
         if (crouched)
         {
+            character.speed = reducedSpeed;
             box.size = new Vector2(InitialBoxSize.x, InitialBoxSize.y / 2);
             box.offset = new Vector2(InitialBoxOffset.x, InitialBoxOffset.y - box.size.y / 2);
         }
         else
         {
+            character.speed = actualSpeed;
             box.size = InitialBoxSize;
             box.offset = InitialBoxOffset;
         }
