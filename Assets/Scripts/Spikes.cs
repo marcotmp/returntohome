@@ -5,11 +5,12 @@ using UnityEngine;
 public class Spikes : MonoBehaviour
 {
     private bool hasPlayer = false;
+    public float damage = 5f;
 
     // Update is called once per frame
     void Update()
     {
-        if (hasPlayer) GameController.instance.DecreaseEnergy(5);
+        if (hasPlayer) GameController.instance.DecreaseEnergy(damage);
     }
 
     public void OnTriggerEnter2D(Collider2D other)
