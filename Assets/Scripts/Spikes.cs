@@ -15,7 +15,11 @@ public class Spikes : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        hasPlayer = true;
+        var father = other.GetComponent<FatherController>();
+        if (father == null || !father.IsHidden)
+        {
+            hasPlayer = true;
+        }   
     }
 
     public void OnTriggerExit2D(Collider2D other)

@@ -23,6 +23,7 @@ public class CharacterController : MonoBehaviour {
     private bool jumpButton;
     private bool isJumping = false;
     private float shootCoolDown = 0;
+    public bool canMove = true;
 
     private bool isActive;
     public float xSize = 0.5f;
@@ -34,10 +35,10 @@ public class CharacterController : MonoBehaviour {
     }
 
     private void FixedUpdate()
-    { 
+    {
         jumpButton = Input.GetButton("Jump");
         var h = Input.GetAxis("Horizontal");
-        
+        if (!canMove) h = 0;
         if (h > 0)
             Flip(true);
         else if (h < 0)
@@ -47,11 +48,12 @@ public class CharacterController : MonoBehaviour {
 
         velocity.y = rigidbody.velocity.y;
 
+
         if (velocity.y < 0 && rigidbody.gravityScale == 1)
             rigidbody.gravityScale = 3;
 
         if (Mathf.Abs(velocity.y) > 16)
-            velocity.y = velocity.y>0?1:-1 * 16;
+            velocity.y = velocity.y > 0 ? 1 : -1 * 16;
 
         if (canJump && !isJumping) // idle state?
         {
@@ -69,7 +71,7 @@ public class CharacterController : MonoBehaviour {
                 velocity.y = Mathf.Min(velocity.y, reducedJumpVelocity);
             }
         }
-        
+
         rigidbody.velocity = velocity;
 
         CheckCollisions();
