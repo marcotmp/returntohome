@@ -11,8 +11,9 @@ public class ActivationZone : MonoBehaviour
     
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (key == controller.currentKey)
+        if (key == -1 || key == controller.currentKey)
         {
+            controller.RemoveCurrentKey();
             onTriggered?.Invoke();
         }
     }
